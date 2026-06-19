@@ -50,6 +50,7 @@ export const ASSETS = {
     { id: 8,  name: 'AK',      role: 'Wicket Keeper',       number: '7', speciality: 'Finisher',     image: 'https://i.pravatar.cc/400?img=40' },
     { id: 9,  name: 'Supun',  role: 'All Rounder',       number: '18', speciality: 'Defender',     image: 'https://i.pravatar.cc/400?img=41' },
     { id: 10, name: 'Riki',    role: 'All-Rounder',        number: '7', speciality: 'Versatile',    image: 'https://i.pravatar.cc/400?img=42' },
+    { id: 10, name: 'Addhil',    role: 'Batsman',        number: '333', speciality: 'Versatile',    image: 'assets/players/aadhil.jpeg' },
   ],
 };
 
