@@ -41,7 +41,7 @@ export const ASSETS = {
   logo: '/assets/logo-coy.png',
   squad: [
     { id: 1,  name: 'Kaish ',  role: 'Captain',    number: '59', speciality: 'All-Rounder',  image: 'assets/players/kaiz.jpeg' },
-    { id: 2,  name: 'Rizwan',  role: 'All-Rounder',    number: '5', speciality: 'Power Hitter', image: 'https://i.pravatar.cc/400?img=34' },
+    { id: 2,  name: 'Rizwan',  role: 'Batsman',    number: '5', speciality: 'Power Hitter', image: 'https://i.pravatar.cc/400?img=34' },
     { id: 3,  name: 'INZU',   role: 'Batsman',        number: '25', speciality: 'Pace Attack',  image: 'assets/players/infaz.jpeg' },
     { id: 4,  name: 'M. Rizwan',      role: 'All-Rounder', number: '17', speciality: 'Guardian',     image: 'https://i.pravatar.cc/400?img=36' },
     { id: 5,  name: 'Praveen',    role: 'All Rounder ',        number: '18', speciality: 'Spin Attack',  image: 'https://i.pravatar.cc/400?img=37' },
