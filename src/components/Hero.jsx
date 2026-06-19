@@ -185,7 +185,7 @@ export default function Hero() {
             <Shield3D size={'clamp(200px,46vw,320px)'} />
           </div> */}
 
-          <motion.div className="cta-buttons" {...fadeUp(.36)} style={{ display:'flex', gap:'1rem', flexWrap:'wrap', justifyContent:'flex-start' }}>
+          <motion.div className="cta-buttons" {...fadeUp(.36)} style={{ display:'flex', gap:'1rem', flexWrap:'wrap' }}>
             <motion.button whileHover={{ scale:1.05 }} whileTap={{ scale:.96 }}
               onClick={() => go('#squad')}
               style={{
@@ -272,7 +272,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <style>{"\n        .mobile-shield{ display:none; justify-content:center; }\n        .cta-buttons{ margin:0 !important; padding-left:0 !important; justify-content:flex-start; }\n        .follow-row{ margin-top:0; }\n        @media(max-width:768px){\n          .hero-grid{ grid-template-columns:1fr !important; text-align:center; }\n          .hero-grid > div:last-child{ display:none; }\n          .mobile-shield{ display:flex; position:static; margin:0.6rem auto 0.75rem; max-width:90%; justify-content:center; }\n          .mobile-shield > div{ margin:0 auto; }\n          .cta-buttons{ margin:0 0 1.25rem 0 !important; justify-content:center; }\n          .follow-row{ margin-top:0.5rem; }\n          .hero-grid h1{ white-space:normal; overflow-wrap:break-word; }\n        }\n        @media(max-width:420px){\n          .mobile-shield{ margin:0.4rem auto 0.6rem; }\n          .cta-buttons{ margin-bottom:1rem !important; }\n          .follow-row{ margin-top:0.4rem; }\n          .hero-grid h1{ font-size:clamp(3rem,8.5vw,5.5rem) !important; }\n          .hero-grid h1:first-of-type{ margin-bottom:0.5rem !important; }\n        }\n      "}</style>
+      <style>{"\n        .mobile-shield{ display:none; justify-content:center; }\n        .cta-buttons{ margin:0 0 1.5rem 0 !important; padding-left:0 !important; justify-content:flex-start; }\n        .follow-row{ margin-top:0; }\n        @media(max-width:1024px){\n          .cta-buttons{ margin-bottom:1.75rem !important; }\n        }\n        @media(max-width:768px){\n          .hero-grid{ grid-template-columns:1fr !important; text-align:center; }\n          .hero-grid > div:last-child{ display:none; }\n          .mobile-shield{ display:flex; position:static; margin:0.6rem auto 0.75rem; max-width:90%; justify-content:center; }\n          .mobile-shield > div{ margin:0 auto; }\n          .cta-buttons{ margin:0 0 2.5rem 0 !important; justify-content:center; }\n          .follow-row{ margin-top:0.5rem; }\n          .hero-grid h1{ white-space:normal; overflow-wrap:break-word; }\n        }\n        @media(max-width:420px){\n          .mobile-shield{ margin:0.4rem auto 0.6rem; }\n          .cta-buttons{ margin-bottom:2rem !important; }\n          .follow-row{ margin-top:0.75rem; }\n          .hero-grid h1{ font-size:clamp(3rem,8.5vw,5.5rem) !important; }\n          .hero-grid h1:first-of-type{ margin-bottom:0.5rem !important; }\n        }\n      "}</style>
     </section>
   );
 }
