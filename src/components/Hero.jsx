@@ -70,9 +70,9 @@ function Shield3D() {
       style={{ perspective:'800px', cursor:'none', userSelect:'none' }}>
       <motion.div style={{
         rotateX:rotX, rotateY:rotY,
-        // Increased min/viewport/max sizes to make the shield/logo larger on all screens
-        width:'clamp(320px,36vw,560px)',
-        height:'clamp(320px,36vw,560px)',
+        // Adjusted min size so the shield/logo can fit on small screens
+        width:'clamp(160px,36vw,420px)',
+        height:'clamp(160px,36vw,420px)',
         transformStyle:'preserve-3d',
         animation:'float 4s ease-in-out infinite',
       }}>
@@ -262,7 +262,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <style>{"\n        @media(max-width:768px){\n          .hero-grid{ grid-template-columns:1fr !important; text-align:center; }\n          .hero-grid > div:last-child{ display:none; }\n          .hero-grid h1{ white-space:normal; overflow-wrap:break-word; }\n        }\n        @media(max-width:420px){\n          .hero-grid h1{ font-size:clamp(3rem,8.5vw,5.5rem) !important; }\n          .hero-grid h1:first-of-type{ margin-bottom:0.5rem !important; }\n        }\n      "}</style>
+      <style>{"\n        @media(max-width:768px){\n          .hero-grid{ grid-template-columns:1fr !important; text-align:center; }\n          .hero-grid > div:last-child{ display:block; margin:1.5rem auto 0; }\n          .hero-grid > div:last-child > *{ margin:0 auto; }\n          .hero-grid h1{ white-space:normal; overflow-wrap:break-word; }\n        }\n        @media(max-width:420px){\n          .hero-grid h1{ font-size:clamp(3rem,8.5vw,5.5rem) !important; }\n          .hero-grid h1:first-of-type{ margin-bottom:0.5rem !important; }\n        }\n      "}</style>
     </section>
   );
 }
