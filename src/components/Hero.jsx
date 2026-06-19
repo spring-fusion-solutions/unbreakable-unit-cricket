@@ -140,7 +140,7 @@ export default function Hero() {
 
           <motion.h1 {...fadeUp(.1)} style={{
             fontFamily:FONTS.display, fontSize:FONT_SIZES.hero, fontWeight:700,
-            lineHeight:.1, textTransform:'uppercase', letterSpacing:'-0.01em',
+            lineHeight:.5, textTransform:'uppercase', letterSpacing:'0.01em',
             color:COLORS.white, marginBottom:'0.5rem',
           }}>
             Unbreak<span style={{
@@ -152,7 +152,7 @@ export default function Hero() {
 
           <motion.h1 {...fadeUp(.18)} style={{
             fontFamily:FONTS.display, fontSize:FONT_SIZES.hero, fontWeight:700,
-            lineHeight:0.92, textTransform:'uppercase', letterSpacing:'-0.01em',
+            lineHeight:.5, textTransform:'uppercase', letterSpacing:'-0.01em',
             color:COLORS.white, marginBottom:'2rem',
             textShadow:`0 0 60px ${COLORS.goldGlow}`,
           }}>
@@ -262,7 +262,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <style>{"\n        @media(max-width:768px){\n          .hero-grid{ grid-template-columns:1fr !important; text-align:center; }\n          .hero-grid > div:last-child{ display:none; }\n        }\n      "}</style>
+      <style>{"\n        @media(max-width:768px){\n          .hero-grid{ grid-template-columns:1fr !important; text-align:center; }\n          .hero-grid > div:last-child{ display:none; }\n          .hero-grid h1{ white-space:normal; overflow-wrap:break-word; }\n        }\n        @media(max-width:420px){\n          .hero-grid h1{ font-size:clamp(3rem,8.5vw,5.5rem) !important; }\n          .hero-grid h1:first-of-type{ margin-bottom:0.5rem !important; }\n        }\n      "}</style>
     </section>
   );
 }
