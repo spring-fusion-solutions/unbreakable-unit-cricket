@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&family=Barlow+Condensed:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Barlow:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --navy:       #0B1E36;
+  --navy-deep:  #060F1C;
+  --navy-mid:   #0F2744;
+  --slate:      #2C3E50;
+  --gold:       #D4AF37;
+  --gold-light: #F0CC55;
+  --gold-glow:  rgba(212,175,55,0.35);
+  --white:      #FFFFFF;
+  --off-white:  #E2E8F0;
+  --muted:      #7B92B2;
+  --border:     rgba(212,175,55,0.2);
+  --font-d:     'Teko','Barlow Condensed',sans-serif;
+  --font-h:     'Barlow Condensed',sans-serif;
+  --font-b:     'Barlow',sans-serif;
+}
+
+,*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--navy-deep);color:var(--off-white);font-family:var(--font-b);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer}
+::selection{background:var(--gold);color:#000}
+
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--navy-deep)}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
+
+.lbl{font-family:var(--font-h);font-size:.68rem;font-weight:700;letter-spacing:.35em;text-transform:uppercase;color:var(--gold)}
+
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes pulse-gold{0%,100%{box-shadow:0 0 0 0 rgba(212,175,55,.4)}50%{box-shadow:0 0 0 12px rgba(212,175,55,0)}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+@keyframes rotate-slow{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
