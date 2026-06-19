@@ -152,7 +152,7 @@ export default function Hero() {
 
           <motion.h1 {...fadeUp(.18)} style={{
             fontFamily:FONTS.display, fontSize:FONT_SIZES.hero, fontWeight:700,
-            lineHeight:.1, textTransform:'uppercase', letterSpacing:'-0.01em',
+            lineHeight:0.92, textTransform:'uppercase', letterSpacing:'-0.01em',
             color:COLORS.white, marginBottom:'2rem',
             textShadow:`0 0 60px ${COLORS.goldGlow}`,
           }}>
