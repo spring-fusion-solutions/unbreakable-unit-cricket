@@ -133,6 +133,11 @@ export default function Hero() {
       }} className="hero-grid">
 
         <div>
+
+<div className="mobile-shield">
+            <Shield3D size={'clamp(200px,46vw,320px)'} />
+          </div>
+
           <motion.p className="lbl" {...fadeUp(0)} style={{ marginBottom:'1.5rem' }}>
             Est. {TEAM.founded} &nbsp;·&nbsp; {TEAM.location} &nbsp;·&nbsp; Owned by {TEAM.owner}
           </motion.p>
@@ -176,9 +181,9 @@ export default function Hero() {
           </motion.p>
 
            {/* Mobile-only shield shown between the buttons and Follow links */}
-          <div className="mobile-shield">
+          {/* <div className="mobile-shield">
             <Shield3D size={'clamp(200px,46vw,320px)'} />
-          </div>
+          </div> */}
 
           <motion.div className="cta-buttons" {...fadeUp(.36)} style={{ display:'flex', gap:'1rem', flexWrap:'wrap', justifyContent:'center' }}>
             <motion.button whileHover={{ scale:1.05 }} whileTap={{ scale:.96 }}
