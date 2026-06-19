@@ -40,17 +40,16 @@ export const FONT_SIZES = {
 export const ASSETS = {
   logo: '/assets/logo.png',
   squad: [
-    { id: 1,  name: 'Super Phoenix',  role: 'Captain / Owner',    number: '01', speciality: 'All-Rounder',  image: 'https://i.pravatar.cc/400?img=33' },
-    { id: 2,  name: 'Striker Alpha',  role: 'Opening Batsman',    number: '07', speciality: 'Power Hitter', image: 'https://i.pravatar.cc/400?img=34' },
-    { id: 3,  name: 'Thunder Bolt',   role: 'Fast Bowler',        number: '09', speciality: 'Pace Attack',  image: 'https://i.pravatar.cc/400?img=35' },
-    { id: 4,  name: 'Iron Wall',      role: 'Wicket Keeper',      number: '04', speciality: 'Guardian',     image: 'https://i.pravatar.cc/400?img=36' },
-    { id: 5,  name: 'Spin Master',    role: 'Leg Spinner',        number: '17', speciality: 'Spin Attack',  image: 'https://i.pravatar.cc/400?img=37' },
-    { id: 6,  name: 'Anchor Unit',    role: 'Middle Order',       number: '06', speciality: 'Stabiliser',   image: 'https://i.pravatar.cc/400?img=38' },
-    { id: 7,  name: 'Chain Breaker',  role: 'Opening Bowler',     number: '11', speciality: 'Swing Wizard', image: 'https://i.pravatar.cc/400?img=39' },
-    { id: 8,  name: 'Gold Rush',      role: 'Pinch Hitter',       number: '24', speciality: 'Finisher',     image: 'https://i.pravatar.cc/400?img=40' },
-    { id: 9,  name: 'Shield Bearer',  role: 'Middle Order',       number: '03', speciality: 'Defender',     image: 'https://i.pravatar.cc/400?img=41' },
-    { id: 10, name: 'Storm Rider',    role: 'All-Rounder',        number: '21', speciality: 'Versatile',    image: 'https://i.pravatar.cc/400?img=42' },
-    { id: 11, name: 'Last Stand',     role: 'Tail Ender',         number: '33', speciality: 'Resilient',    image: 'https://i.pravatar.cc/400?img=43' },
+    { id: 1,  name: 'Kaish ',  role: 'Captain',    number: '59', speciality: 'All-Rounder',  image: 'https://i.pravatar.cc/400?img=33' },
+    { id: 2,  name: 'Rizwan',  role: 'All-Rounder',    number: '5', speciality: 'Power Hitter', image: 'https://i.pravatar.cc/400?img=34' },
+    { id: 3,  name: 'INZU',   role: 'Batsman',        number: '25', speciality: 'Pace Attack',  image: 'https://i.pravatar.cc/400?img=35' },
+    { id: 4,  name: 'M. Rizwan',      role: 'All-Rounder', number: '17', speciality: 'Guardian',     image: 'https://i.pravatar.cc/400?img=36' },
+    { id: 5,  name: 'Praveen',    role: 'All Rounder ',        number: '18', speciality: 'Spin Attack',  image: 'https://i.pravatar.cc/400?img=37' },
+    { id: 6,  name: 'MTR',    role: 'All Rounder ',       number: '620', speciality: 'Stabiliser',   image: 'https://i.pravatar.cc/400?img=38' },
+    { id: 7,  name: 'Aravinth',  role: 'All Rounder',     number: '613', speciality: 'Swing Wizard', image: 'https://i.pravatar.cc/400?img=39' },
+    { id: 8,  name: 'AK',      role: 'Wicket Keeper',       number: '7', speciality: 'Finisher',     image: 'https://i.pravatar.cc/400?img=40' },
+    { id: 9,  name: 'Supun',  role: 'All Rounder',       number: '18', speciality: 'Defender',     image: 'https://i.pravatar.cc/400?img=41' },
+    { id: 10, name: 'Riki',    role: 'All-Rounder',        number: '7', speciality: 'Versatile',    image: 'https://i.pravatar.cc/400?img=42' },
   ],
 };
 
@@ -58,7 +57,7 @@ export const SOCIAL = {
   facebook:  'https://facebook.com',
   instagram: 'https://instagram.com',
   tiktok:    'https://tiktok.com',
-  whatsapp:  'https://wa.me/94XXXXXXXXX',
+  whatsapp:  'https://wa.me/94702452086',
 };
 
 export const NAV_ITEMS = [

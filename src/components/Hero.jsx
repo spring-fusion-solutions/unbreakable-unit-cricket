@@ -203,7 +203,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Mobile-only shield shown above the Follow links */}
-          <div className="mobile-shield" style={{ display:'none' }}>
+          <div className="mobile-shield">
             <Shield3D size={'clamp(220px,48vw,520px)'} />
           </div>
 
@@ -267,7 +267,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <style>{"\n        @media(max-width:768px){\n          .hero-grid{ grid-template-columns:1fr !important; text-align:center; }\n          .hero-grid > div:last-child{ display:none; }\n          .mobile-shield{ display:block; margin:0 auto 1.25rem; max-width:90%; }\n          .mobile-shield > div{ margin:0 auto; }\n          .hero-grid h1{ white-space:normal; overflow-wrap:break-word; }\n        }\n        @media(max-width:420px){\n          .hero-grid h1{ font-size:clamp(3rem,8.5vw,5.5rem) !important; }\n          .hero-grid h1:first-of-type{ margin-bottom:0.5rem !important; }\n        }\n      "}</style>
+      <style>{"\n        .mobile-shield{ display:none; }\n        @media(max-width:768px){\n          .hero-grid{ grid-template-columns:1fr !important; text-align:center; }\n          .hero-grid > div:last-child{ display:none; }\n          .mobile-shield{ display:block; margin:0 auto 1.25rem; max-width:90%; }\n          .mobile-shield > div{ margin:0 auto; }\n          .hero-grid h1{ white-space:normal; overflow-wrap:break-word; }\n        }\n        @media(max-width:420px){\n          .hero-grid h1{ font-size:clamp(3rem,8.5vw,5.5rem) !important; }\n          .hero-grid h1:first-of-type{ margin-bottom:0.5rem !important; }\n        }\n      "}</style>
     </section>
   );
 }

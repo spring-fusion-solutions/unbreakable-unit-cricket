@@ -13,8 +13,8 @@ const socials = [
 
 const contacts = [
   { icon:FaMapMarkerAlt, label:'Location', value:'Sri Lanka' },
-  { icon:FaEnvelope,     label:'Email',    value:'info@unbreakableunit.lk' },
-  { icon:FaPhone,        label:'WhatsApp', value:'+94 XX XXX XXXX' },
+  { icon:FaEnvelope,     label:'Email',    value:'kaishreeza123@gmail.com' },
+  { icon:FaPhone,        label:'WhatsApp', value:'+94 70 245 2086' },
 ];
 
 function Field({ label, type='text', name, placeholder, multiline, rows=5 }) {
