@@ -38,7 +38,7 @@ export const FONT_SIZES = {
 };
 
 export const ASSETS = {
-  logo: '/assets/logo.png',
+  logo: '/assets/logo-coy.png',
   squad: [
     { id: 1,  name: 'Kaish ',  role: 'Captain',    number: '59', speciality: 'All-Rounder',  image: 'assets/players/kaiz.jpeg' },
     { id: 2,  name: 'Rizwan',  role: 'All-Rounder',    number: '5', speciality: 'Power Hitter', image: 'https://i.pravatar.cc/400?img=34' },
