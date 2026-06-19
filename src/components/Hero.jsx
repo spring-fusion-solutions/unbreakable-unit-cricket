@@ -140,7 +140,7 @@ export default function Hero() {
 
           <motion.h1 {...fadeUp(.1)} style={{
             fontFamily:FONTS.display, fontSize:FONT_SIZES.hero, fontWeight:700,
-            lineHeight:.92, textTransform:'uppercase', letterSpacing:'-0.01em',
+            lineHeight:.1, textTransform:'uppercase', letterSpacing:'-0.01em',
             color:COLORS.white, marginBottom:'0.5rem',
           }}>
             Unbreak<span style={{
