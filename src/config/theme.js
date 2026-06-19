@@ -40,12 +40,12 @@ export const FONT_SIZES = {
 export const ASSETS = {
   logo: '/assets/logo.png',
   squad: [
-    { id: 1,  name: 'Kaish ',  role: 'Captain',    number: '59', speciality: 'All-Rounder',  image: 'https://i.pravatar.cc/400?img=33' },
+    { id: 1,  name: 'Kaish ',  role: 'Captain',    number: '59', speciality: 'All-Rounder',  image: 'assets/players/kaiz.jpeg' },
     { id: 2,  name: 'Rizwan',  role: 'All-Rounder',    number: '5', speciality: 'Power Hitter', image: 'https://i.pravatar.cc/400?img=34' },
-    { id: 3,  name: 'INZU',   role: 'Batsman',        number: '25', speciality: 'Pace Attack',  image: 'https://i.pravatar.cc/400?img=35' },
+    { id: 3,  name: 'INZU',   role: 'Batsman',        number: '25', speciality: 'Pace Attack',  image: 'assets/players/infaz.jpeg' },
     { id: 4,  name: 'M. Rizwan',      role: 'All-Rounder', number: '17', speciality: 'Guardian',     image: 'https://i.pravatar.cc/400?img=36' },
     { id: 5,  name: 'Praveen',    role: 'All Rounder ',        number: '18', speciality: 'Spin Attack',  image: 'https://i.pravatar.cc/400?img=37' },
-    { id: 6,  name: 'MTR',    role: 'All Rounder ',       number: '620', speciality: 'Stabiliser',   image: 'https://i.pravatar.cc/400?img=38' },
+    { id: 6,  name: 'MTR',    role: 'All Rounder ',       number: '620', speciality: 'Stabiliser',   image: 'assets/players/thasleem.jpeg' },
     { id: 7,  name: 'Aravinth',  role: 'All Rounder',     number: '613', speciality: 'Swing Wizard', image: 'https://i.pravatar.cc/400?img=39' },
     { id: 8,  name: 'AK',      role: 'Wicket Keeper',       number: '7', speciality: 'Finisher',     image: 'https://i.pravatar.cc/400?img=40' },
     { id: 9,  name: 'Supun',  role: 'All Rounder',       number: '18', speciality: 'Defender',     image: 'https://i.pravatar.cc/400?img=41' },

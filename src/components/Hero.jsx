@@ -70,7 +70,6 @@ function Shield3D({ size = 'clamp(160px,36vw,420px)' }) {
       style={{ perspective:'800px', cursor:'none', userSelect:'none' }}>
       <motion.div style={{
         rotateX:rotX, rotateY:rotY,
-        // Size is configurable (accepts CSS clamp or px)
         width: size,
         height: size,
         transformStyle:'preserve-3d',
@@ -176,7 +175,7 @@ export default function Hero() {
             {TEAM.tagline || `We don't just play cricket - we break limits, shatter records, and stand unbreakable as one unit.`}
           </motion.p>
 
-          <motion.div {...fadeUp(.36)} style={{ display:'flex', gap:'1rem', flexWrap:'wrap', marginBottom:'3rem' }}>
+          <motion.div className="cta-buttons" {...fadeUp(.36)} style={{ display:'flex', gap:'1rem', flexWrap:'wrap', justifyContent:'center' }}>
             <motion.button whileHover={{ scale:1.05 }} whileTap={{ scale:.96 }}
               onClick={() => go('#squad')}
               style={{
@@ -202,9 +201,9 @@ export default function Hero() {
             </motion.button>
           </motion.div>
 
-          {/* Mobile-only shield shown above the Follow links */}
+          {/* Mobile-only shield shown between the buttons and Follow links */}
           <div className="mobile-shield">
-            <Shield3D size={'clamp(220px,48vw,520px)'} />
+            <Shield3D size={'clamp(200px,46vw,320px)'} />
           </div>
 
           <motion.div {...fadeUp(.42)} style={{ display:'flex', gap:'0.85rem', alignItems:'center' }}>
@@ -267,7 +266,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <style>{"\n        .mobile-shield{ display:none; }\n        @media(max-width:768px){\n          .hero-grid{ grid-template-columns:1fr !important; text-align:center; }\n          .hero-grid > div:last-child{ display:none; }\n          .mobile-shield{ display:block; margin:0 auto 1.25rem; max-width:90%; }\n          .mobile-shield > div{ margin:0 auto; }\n          .hero-grid h1{ white-space:normal; overflow-wrap:break-word; }\n        }\n        @media(max-width:420px){\n          .hero-grid h1{ font-size:clamp(3rem,8.5vw,5.5rem) !important; }\n          .hero-grid h1:first-of-type{ margin-bottom:0.5rem !important; }\n        }\n      "}</style>
+      <style>{"\n        .mobile-shield{ display:none; justify-content:center; }\n        .cta-buttons{ margin-bottom:3rem; }\n        @media(max-width:768px){\n          .hero-grid{ grid-template-columns:1fr !important; text-align:center; }\n          .hero-grid > div:last-child{ display:none; }\n          .mobile-shield{ display:flex; position:static; margin:0.1rem auto -12px; max-width:90%; justify-content:center; }\n          .mobile-shield > div{ margin:0 auto; }\n          .cta-buttons{ margin-bottom:0.25rem; }\n          .hero-grid h1{ white-space:normal; overflow-wrap:break-word; }\n        }\n        @media(max-width:420px){\n          .mobile-shield{ margin:0.05rem auto -8px; }\n          .hero-grid h1{ font-size:clamp(3rem,8.5vw,5.5rem) !important; }\n          .hero-grid h1:first-of-type{ margin-bottom:0.5rem !important; }\n        }\n      "}</style>
     </section>
   );
 }
