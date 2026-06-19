@@ -53,7 +53,7 @@ function ParticleField() {
   return <canvas ref={ref} style={{ position:'absolute',inset:0,width:'100%',height:'100%',pointerEvents:'none',opacity:.7 }} />;
 }
 
-function Shield3D() {
+function Shield3D({ size = 'clamp(160px,36vw,420px)' }) {
   const mx = useMotionValue(0), my = useMotionValue(0);
   const rotX = useSpring(useTransform(my,[-300,300],[18,-18]),{stiffness:120,damping:20});
   const rotY = useSpring(useTransform(mx,[-300,300],[-18,18]),{stiffness:120,damping:20});
@@ -70,9 +70,9 @@ function Shield3D() {
       style={{ perspective:'800px', cursor:'none', userSelect:'none' }}>
       <motion.div style={{
         rotateX:rotX, rotateY:rotY,
-        // Adjusted min size so the shield/logo can fit on small screens
-        width:'clamp(160px,36vw,420px)',
-        height:'clamp(160px,36vw,420px)',
+        // Size is configurable (accepts CSS clamp or px)
+        width: size,
+        height: size,
         transformStyle:'preserve-3d',
         animation:'float 4s ease-in-out infinite',
       }}>
@@ -202,6 +202,11 @@ export default function Hero() {
             </motion.button>
           </motion.div>
 
+          {/* Mobile-only shield shown above the Follow links */}
+          <div className="mobile-shield" style={{ display:'none' }}>
+            <Shield3D size={'clamp(220px,48vw,520px)'} />
+          </div>
+
           <motion.div {...fadeUp(.42)} style={{ display:'flex', gap:'0.85rem', alignItems:'center' }}>
             <span style={{ fontFamily:FONTS.accent, fontSize:'0.65rem', letterSpacing:'0.2em', color:COLORS.subtle, textTransform:'uppercase' }}>Follow</span>
             {SOCIAL_LINKS.map(({ icon:Icon, href, label }) => (
@@ -262,7 +267,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <style>{"\n        @media(max-width:768px){\n          .hero-grid{ grid-template-columns:1fr !important; text-align:center; }\n          .hero-grid > div:last-child{ display:block; margin:1.5rem auto 0; }\n          .hero-grid > div:last-child > *{ margin:0 auto; }\n          .hero-grid h1{ white-space:normal; overflow-wrap:break-word; }\n        }\n        @media(max-width:420px){\n          .hero-grid h1{ font-size:clamp(3rem,8.5vw,5.5rem) !important; }\n          .hero-grid h1:first-of-type{ margin-bottom:0.5rem !important; }\n        }\n      "}</style>
+      <style>{"\n        @media(max-width:768px){\n          .hero-grid{ grid-template-columns:1fr !important; text-align:center; }\n          .hero-grid > div:last-child{ display:none; }\n          .mobile-shield{ display:block; margin:0 auto 1.25rem; max-width:90%; }\n          .mobile-shield > div{ margin:0 auto; }\n          .hero-grid h1{ white-space:normal; overflow-wrap:break-word; }\n        }\n        @media(max-width:420px){\n          .hero-grid h1{ font-size:clamp(3rem,8.5vw,5.5rem) !important; }\n          .hero-grid h1:first-of-type{ margin-bottom:0.5rem !important; }\n        }\n      "}</style>
     </section>
   );
 }
