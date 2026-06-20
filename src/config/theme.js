@@ -50,9 +50,9 @@ export const ASSETS = {
     { id: 8,  name: 'AK',      role: 'Wicket Keeper',       number: '7', speciality: 'Finisher',     image: 'assets/players/ak.jpeg' },
     { id: 9,  name: 'Supun',  role: 'All Rounder',       number: '18', speciality: 'Defender',     image: 'assets/players/supun.jpeg' },
     { id: 10, name: 'Riki',    role: 'All-Rounder',        number: '7', speciality: 'Versatile',    image: 'assets/players/riki.jpeg' },
-    { id: 11, name: 'Addhil',    role: 'Batsman',        number: '333', speciality: 'Versatile',    image: 'assets/players/aadhil.jpeg' },
+    { id: 11, name: 'Adhil',    role: 'Batsman',        number: '333', speciality: 'Versatile',    image: 'assets/players/aadhil.jpeg' },
       { id: 12, name: 'Arafath',    role: 'Allrounder',        number: '1', speciality: 'Versatile',    image: 'assets/players/arafath.jpeg' },
-      { id: 12, name: 'Braco',    role: 'Allrounder',        number: '2', speciality: 'Versatile',    image: 'assets/players/bravo.jpeg' },
+      { id: 12, name: 'Bravo',    role: 'Allrounder',        number: '2', speciality: 'Versatile',    image: 'assets/players/bravo.jpeg' },
   ],
 };
 
