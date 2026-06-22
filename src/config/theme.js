@@ -53,6 +53,7 @@ export const ASSETS = {
     { id: 11, name: 'Adhil',    role: 'Batsman',        number: '333', speciality: 'Versatile',    image: 'assets/players/aadhil.jpeg' },
       { id: 12, name: 'Arafath',    role: 'Allrounder',        number: '1', speciality: 'Versatile',    image: 'assets/players/arafath.jpeg' },
       { id: 12, name: 'Bravo',    role: 'Allrounder',        number: '2', speciality: 'Versatile',    image: 'assets/players/bravo.jpeg' },
+       { id: 13, name: 'Abdul wahhab',    role: 'Batsman',        number: '2', speciality: 'Versatile',    image: 'assets/players/abdul.jpg' }
   ],
 };
 
