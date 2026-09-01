@@ -40,23 +40,12 @@ export const FONT_SIZES = {
 export const ASSETS = {
   logo: '/assets/logo-coy.png',
   squad: [
-    { id: 1, name: 'Kaish ', role: 'Captain and Manager', number: '59', speciality: 'All-Rounder', image: 'assets/players/kaiz.jpeg' },
-    { id: 2, name: 'Rizwan', role: 'Batsman', number: '5', speciality: 'Power Hitter', image: 'assets/players/rizwan.jpeg' },
-    { id: 3, name: 'INZU', role: 'Batsman', number: '25', speciality: 'Pace Attack', image: 'assets/players/infaz.jpeg' },
-    { id: 4, name: 'M. Rizwan', role: 'All-Rounder', number: '17', speciality: 'Guardian', image: 'assets/players/m.rizwan.jpeg' },
-    { id: 5, name: 'Praveen', role: 'All Rounder ', number: '18', speciality: 'Spin Attack', image: 'assets/players/praveen.jpeg' },
-    { id: 6, name: 'MTR', role: 'All Rounder ', number: '620', speciality: 'Stabiliser', image: 'assets/players/thasleem.jpeg' },
-    { id: 7, name: 'Aravinth', role: 'All Rounder', number: '613', speciality: 'Swing Wizard', image: 'assets/players/aravinth.jpeg' },
-    { id: 8, name: 'AK', role: 'Wicket Keeper', number: '7', speciality: 'Finisher', image: 'assets/players/ak.jpeg' },
-    { id: 9, name: 'Supun', role: 'All Rounder', number: '18', speciality: 'Defender', image: 'assets/players/supun.jpeg' },
-    { id: 10, name: 'Riki', role: 'All-Rounder', number: '7', speciality: 'Versatile', image: 'assets/players/riki.jpeg' },
-    { id: 11, name: 'Adhil', role: 'Batsman', number: '333', speciality: 'Versatile', image: 'assets/players/aadhil.jpeg' },
-    { id: 12, name: 'Arafath', role: 'Allrounder', number: '1', speciality: 'Versatile', image: 'assets/players/arafath.jpeg' },
-    { id: 13, name: 'Bravo', role: 'Allrounder', number: '2', speciality: 'Versatile', image: 'assets/players/bravo.jpeg' },
-    { id: 14, name: 'Abdul wahhab', role: 'Batsman', number: '718', speciality: 'Versatile', image: 'assets/players/abdul.jpg' },
-    { id: 15, name: 'Shamik', role: 'Batsman', number: '05', speciality: 'Versatile', image: 'assets/players/shamik.jpeg' },
-    { id: 16, name: 'Ashfaq', role: 'Batsman', number: '01', speciality: 'Versatile', image: 'assets/players/ashfaq.jpeg' },
-    { id: 17, name: 'HM Afham', role: 'Batsman', number: '33', speciality: 'Versatile', image: 'assets/players/afham.jpeg' }
+    { id: 1, name: 'Kaish ', role: 'Captain and Manager', number: '59', speciality: 'All-Rounder', image: 'assets/players/kaiz.jpeg' },  
+    { id: 2, name: 'Arafath', role: 'Allrounder', number: '1', speciality: 'Versatile', image: 'assets/players/arafath.jpeg' },
+    { id: 3, name: 'Abdul wahhab', role: 'Batsman', number: '718', speciality: 'Versatile', image: 'assets/players/abdul.jpg' },
+    { id: 4, name: 'Shamik', role: 'Batsman', number: '05', speciality: 'Versatile', image: 'assets/players/shamik.jpeg' },
+    { id: 5, name: 'Ashfaq', role: 'Batsman', number: '01', speciality: 'Versatile', image: 'assets/players/ashfaq.jpeg' },
+    { id: 6, name: 'HM Afham', role: 'Batsman', number: '33', speciality: 'Versatile', image: 'assets/players/afham.jpeg' }
   ],
   
 };
@@ -78,9 +67,9 @@ export const NAV_ITEMS = [
 
 export const TEAM = {
   name: 'Unbreakable Unit',
-  cricket: 'Cricket',
+  cricket: 'Cricket Club',
   slogan: 'Forged in Unity. Built to Last.',
-  owner: 'Super Phoenix',
-  founded: '2024',
+  owner: 'Kaish',
+  founded: '2025',
   location: 'Sri Lanka',
 };

@@ -65,7 +65,7 @@ export default function About() {
               <strong style={{ color: COLORS.gold }}>Unbreakable Unit Cricket</strong> was born from a simple conviction — that the right group of people, united by purpose, can't be defeated.
             </p>
             <p style={{ fontFamily: FONTS.body, fontSize: '1.05rem', color: COLORS.muted, lineHeight: 1.8, marginBottom: '1.5rem' }}>
-              Owned and founded by <strong style={{ color: COLORS.white }}>Super Phoenix</strong>, our team from Sri Lanka is built on aggressive cricket, steel discipline, and a brotherhood that refuses to fracture under pressure.
+              Owned and founded by <strong style={{ color: COLORS.white }}>Kaish</strong>, our team from Sri Lanka is built on aggressive cricket, steel discipline, and a brotherhood that refuses to fracture under pressure.
             </p>
             <p style={{ fontFamily: FONTS.body, fontSize: '1.05rem', color: COLORS.muted, lineHeight: 1.8 }}>
               Every player in this unit is a champion. Together, we are <em style={{ color: COLORS.gold }}>unbreakable</em>.
