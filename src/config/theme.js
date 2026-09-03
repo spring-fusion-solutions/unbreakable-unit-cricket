@@ -62,10 +62,11 @@ export const SOCIAL = {
 };
 
 export const NAV_ITEMS = [
-  { label: 'Home', href: '#hero' },
-  { label: 'About', href: '#about' },
+  { label: 'Home',    href: '#hero'    },
+  { label: 'About',   href: '#about'   },
   { label: 'Mission', href: '#mission' },
-  { label: 'Squad', href: '#squad' },
+  { label: 'Squad',   href: '#squad'   },
+  { label: 'Results', href: '#results' },
   { label: 'Contact', href: '#contact' },
 ];
 

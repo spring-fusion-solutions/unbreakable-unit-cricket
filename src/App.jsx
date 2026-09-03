@@ -1,11 +1,12 @@
 import React from 'react';
-import Navbar  from './components/Navbar';
-import Hero    from './components/Hero';
-import About   from './components/About';
-import Mission from './components/Mission';
-import Squad   from './components/Squad';
-import Contact from './components/Contact';
-import Footer  from './components/Footer';
+import Navbar       from './components/Navbar';
+import Hero         from './components/Hero';
+import About        from './components/About';
+import Mission      from './components/Mission';
+import Squad        from './components/Squad';
+import MatchResults from './components/MatchResults';
+import Contact      from './components/Contact';
+import Footer       from './components/Footer';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <About />
         <Mission />
         <Squad />
+        <MatchResults />
         <Contact />
       </main>
       <Footer />
