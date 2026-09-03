@@ -42,10 +42,14 @@ export const ASSETS = {
   squad: [
     { id: 1, name: 'Kaish ', role: 'Captain and Manager', number: '59', speciality: 'All-Rounder', image: 'assets/players/kaiz.jpeg' },  
     { id: 2, name: 'Arafath', role: 'Allrounder', number: '1', speciality: 'Versatile', image: 'assets/players/arafath.jpeg' },
-    { id: 3, name: 'Abdul wahhab', role: 'Batsman', number: '718', speciality: 'Versatile', image: 'assets/players/abdul.jpg' },
+    { id: 3, name: 'Abdul wahhab', role: 'Allrounder', number: '718', speciality: 'Versatile', image: 'assets/players/abdul.jpg' },
     { id: 4, name: 'Shamik', role: 'Batsman', number: '05', speciality: 'Versatile', image: 'assets/players/shamik.jpeg' },
     { id: 5, name: 'Ashfaq', role: 'Batsman', number: '01', speciality: 'Versatile', image: 'assets/players/ashfaq.jpeg' },
-    { id: 6, name: 'HM Afham', role: 'Batsman', number: '33', speciality: 'Versatile', image: 'assets/players/afham.jpeg' }
+    { id: 6, name: 'HM Afham', role: 'Batsman', number: '33', speciality: 'Versatile', image: 'assets/players/afham.jpeg' },
+    { id: 7, name: 'Zamboy', role: 'Batsman', number: '22', speciality: 'Versatile', image: 'assets/players/zamboy.jpeg' },
+    { id: 8, name: 'Halik', role: 'Bowler', number: '32', speciality: 'Versatile', image: 'assets/players/halik.jpeg' },
+    { id: 9, name: 'Naazir', role: 'Bowler', number: '17', speciality: 'Versatile', image: 'assets/players/naazir.jpeg' },
+    { id: 10, name: 'Madushan', role: 'Allrounder', number: '5', speciality: 'Versatile', image: 'assets/players/madushan.jpeg' }
   ],
   
 };
