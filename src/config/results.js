@@ -25,11 +25,11 @@ export const RESULTS = [
     date:         '2026-09-03',
     venue:        'Wattala Ground',
     matches: [
-      { matchNo:1, date:'2026-09-03', result:'W' },
-      { matchNo:2, date:'2026-09-03', result:'L' },
-      { matchNo:3, date:'2026-09-03', result:'W' },
-      { matchNo:4, date:'2026-09-03', result:'W' },
-      { matchNo:5, date:'2026-09-03', result:'L' },
+      { matchNo:1, matchTitle:"Match 1", result:'W' },
+      { matchNo:2, matchTitle:"Match 2", result:'L' },
+      { matchNo:3, matchTitle:"Match 3", result:'W' },
+      { matchNo:4, matchTitle:"Match 4", result:'W' },
+      { matchNo:5, matchTitle:"Match 5", result:'L' },
     ],
   },
   {
@@ -42,9 +42,9 @@ export const RESULTS = [
     date:         '2026-08-10',
     venue:        'Boralesgamuwa',
     matches: [
-      { matchNo:1, date:'2026-08-10', result:'W' },
-      { matchNo:2, date:'2026-08-10', result:'W' },
-      { matchNo:3, date:'2026-08-10', result:'L' },
+      { matchNo:1, matchTitle:"Match 1", result:'W' },
+      { matchNo:2, matchTitle:"Match 2", result:'W' },
+      { matchNo:3, matchTitle:"Match 3", result:'L' },
     ],
   },
   {
@@ -57,11 +57,11 @@ export const RESULTS = [
     date:         '2026-07-20',
     venue:        'Colombo North',
     matches: [
-      { matchNo:1, date:'2026-07-20', result:'L' },
-      { matchNo:2, date:'2026-07-20', result:'W' },
-      { matchNo:3, date:'2026-07-20', result:'W' },
-      { matchNo:4, date:'2026-07-20', result:'W' },
-      { matchNo:5, date:'2026-07-20', result:'L' },
+      { matchNo:1, matchTitle:"Match 1", result:'L' },
+      { matchNo:2, matchTitle:"Match 2", result:'W' },
+      { matchNo:3, matchTitle:"Match 3", result:'W' },
+      { matchNo:4, matchTitle:"Match 4", result:'W' },
+      { matchNo:5, matchTitle:"Match 5", result:'L' },
     ],
   },
 ];

@@ -75,7 +75,7 @@ function Badge({ type }) {
   );
 }
 
-// ── Simple match result pill (no scores) ────────────────────────
+// ── Simple match result pill (no scores, no date) ───────────────
 function MatchPill({ match }) {
   const col = rCol(match.result);
   return (
@@ -84,14 +84,9 @@ function MatchPill({ match }) {
       padding:'0.6rem 0.85rem', gap:'0.75rem',
       background:`${col}0D`, border:`1px solid ${col}35`,
     }}>
-      {/* Match # */}
-      <span style={{ fontFamily:FONTS.display, fontSize:'0.85rem', fontWeight:700, color:COLORS.offWhiteText, minWidth:'28px' }}>
-        M{match.matchNo}
-      </span>
-
-      {/* Date */}
-      <span style={{ fontFamily:FONTS.body, fontSize:'0.68rem', color:COLORS.muted, flex:1 }}>
-        {match.date}
+      {/* Match title */}
+      <span style={{ fontFamily:FONTS.display, fontSize:'0.85rem', fontWeight:700, color:COLORS.offWhiteText, flex:1 }}>
+        {match.matchTitle}
       </span>
 
       {/* Result badge */}
@@ -122,42 +117,41 @@ function SeriesCard({ series }) {
     }}>
       {/* Header */}
       <div style={{ padding:'1.5rem', borderBottom:`1px solid ${COLORS.border}`, flex:'0 0 auto' }}>
-        <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', gap:'0.75rem', flexWrap:'wrap', marginBottom:'1rem' }}>
+        {/* Badge + season row */}
+        <div style={{ display:'flex', gap:'0.5rem', alignItems:'center', marginBottom:'0.55rem', flexWrap:'wrap' }}>
+          <Badge type={series.seriesType}/>
+          <span style={{ fontFamily:FONTS.accent, fontSize:'0.56rem', letterSpacing:'0.15em', color:COLORS.muted, textTransform:'uppercase' }}>{series.season}</span>
+        </div>
 
-          {/* Left */}
-          <div style={{ flex:1, minWidth:'150px' }}>
-            <div style={{ display:'flex', gap:'0.5rem', alignItems:'center', marginBottom:'0.55rem', flexWrap:'wrap' }}>
-              <Badge type={series.seriesType}/>
-              <span style={{ fontFamily:FONTS.accent, fontSize:'0.56rem', letterSpacing:'0.15em', color:COLORS.muted, textTransform:'uppercase' }}>{series.season}</span>
-            </div>
-            <h3 style={{ fontFamily:FONTS.display, fontSize:'clamp(1rem,2.5vw,1.3rem)', fontWeight:700, letterSpacing:'0.06em', textTransform:'uppercase', color:COLORS.white, marginBottom:'0.2rem' }}>
-              {series.preferName}
-            </h3>
-            <p style={{ fontFamily:FONTS.body, fontSize:'0.75rem', color:COLORS.gold, marginBottom:'0.4rem' }}>
-              UU vs {series.opponent}
-            </p>
-            <div style={{ display:'flex', flexWrap:'wrap', gap:'0.6rem' }}>
-              <span style={{ fontFamily:FONTS.body, fontSize:'0.68rem', color:COLORS.muted, display:'flex', alignItems:'center', gap:'0.25rem' }}>
-                <FaMapMarkerAlt size={9}/>{series.venue}
-              </span>
-              <span style={{ fontFamily:FONTS.body, fontSize:'0.68rem', color:COLORS.muted, display:'flex', alignItems:'center', gap:'0.25rem' }}>
-                <FaCalendarAlt size={9}/>{series.date}
-              </span>
-            </div>
-          </div>
+        {/* Title */}
+        <h3 style={{ fontFamily:FONTS.display, fontSize:'clamp(1rem,4vw,1.3rem)', fontWeight:700, letterSpacing:'0.06em', textTransform:'uppercase', color:COLORS.white, marginBottom:'0.2rem' }}>
+          {series.preferName}
+        </h3>
+        <p style={{ fontFamily:FONTS.body, fontSize:'0.75rem', color:COLORS.gold, marginBottom:'0.5rem' }}>
+          UU vs {series.opponent}
+        </p>
 
-          {/* Right — series result */}
-          <div style={{ display:'flex', flexDirection:'column', alignItems:'flex-end', gap:'0.4rem' }}>
-            <div style={{ padding:'4px 12px', background:`${rc}15`, border:`1px solid ${rc}50`, display:'flex', alignItems:'center', gap:'0.35rem' }}>
-              {sum.seriesWon && <FaTrophy size={9} color={COLORS.gold}/>}
-              <span style={{ fontFamily:FONTS.display, fontSize:'0.7rem', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:rc }}>
-                {sum.seriesWon ? 'Series Won' : 'Series Lost'}
-              </span>
-            </div>
-            <span style={{ fontFamily:FONTS.display, fontSize:'0.66rem', color:COLORS.muted, letterSpacing:'0.08em' }}>
-              {sum.won}W · {sum.lost}L{sum.draw>0 ? ` · ${sum.draw}D` : ''}
+        {/* Meta row */}
+        <div style={{ display:'flex', flexWrap:'wrap', gap:'0.6rem', marginBottom:'0.75rem' }}>
+          <span style={{ fontFamily:FONTS.body, fontSize:'0.68rem', color:COLORS.muted, display:'flex', alignItems:'center', gap:'0.25rem' }}>
+            <FaMapMarkerAlt size={9}/>{series.venue}
+          </span>
+          <span style={{ fontFamily:FONTS.body, fontSize:'0.68rem', color:COLORS.muted, display:'flex', alignItems:'center', gap:'0.25rem' }}>
+            <FaCalendarAlt size={9}/>{series.date}
+          </span>
+        </div>
+
+        {/* Result badge row */}
+        <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:'0.5rem', marginBottom:'0' }}>
+          <div style={{ padding:'4px 12px', background:`${rc}15`, border:`1px solid ${rc}50`, display:'flex', alignItems:'center', gap:'0.35rem' }}>
+            {sum.seriesWon && <FaTrophy size={9} color={COLORS.gold}/>}
+            <span style={{ fontFamily:FONTS.display, fontSize:'0.7rem', fontWeight:700, letterSpacing:'0.14em', textTransform:'uppercase', color:rc }}>
+              {sum.seriesWon ? 'Series Won' : 'Series Lost'}
             </span>
           </div>
+          <span style={{ fontFamily:FONTS.display, fontSize:'0.68rem', color:COLORS.muted, letterSpacing:'0.08em' }}>
+            {sum.won}W · {sum.lost}L{sum.draw>0 ? ` · ${sum.draw}D` : ''}
+          </span>
         </div>
 
         {/* Win bar */}
@@ -199,17 +193,19 @@ function SeriesCard({ series }) {
 }
 
 // ── SERIES SLIDER ────────────────────────────────────────────────
-// showNo controls how many series cards appear
-// Arrows + dots to slide between them
 function SeriesSlider({ series, filter }) {
-  const filtered  = filter==='all' ? series : series.filter(s=>s.seriesType===filter);
-  const trackRef  = useRef(null);
+  const filtered   = filter==='all' ? series : series.filter(s=>s.seriesType===filter);
+  const trackRef   = useRef(null);
+  const wrapRef    = useRef(null);
   const [idx, setIdx] = useState(0);
+  const GAP = 16;
 
-  // each card width — responsive
-  const CARD_W = 400; // px — cards are wide
-  const GAP    = 16;
-  const STEP   = CARD_W + GAP;
+  // compute card width from wrapper — full width on mobile, 480px max on desktop
+  const getCardW = () => {
+    if (!wrapRef.current) return 340;
+    const w = wrapRef.current.offsetWidth;
+    return w < 520 ? w : Math.min(w * 0.82, 480);
+  };
 
   const maxIdx = Math.max(0, filtered.length - 1);
 
@@ -217,15 +213,28 @@ function SeriesSlider({ series, filter }) {
     const c = Math.max(0, Math.min(i, maxIdx));
     setIdx(c);
     if (trackRef.current) {
-      animate(trackRef.current, { x: -(c * STEP) }, { type:'spring', stiffness:280, damping:30 });
+      const cardW = getCardW();
+      animate(trackRef.current, { x: -(c * (cardW + GAP)) }, { type:'spring', stiffness:280, damping:30 });
     }
   };
 
-  // reset when filter changes
+  // reset on filter change
   React.useEffect(() => {
     setIdx(0);
     if (trackRef.current) animate(trackRef.current, { x:0 }, { duration:0 });
   }, [filter]);
+
+  // re-slide on window resize so position stays correct
+  React.useEffect(() => {
+    const onResize = () => {
+      if (trackRef.current) {
+        const cardW = getCardW();
+        animate(trackRef.current, { x: -(idx * (cardW + GAP)) }, { duration:0 });
+      }
+    };
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, [idx]);
 
   if (filtered.length === 0) {
     return (
@@ -238,17 +247,21 @@ function SeriesSlider({ series, filter }) {
   }
 
   return (
-    <div>
+    <div ref={wrapRef}>
       {/* Track wrapper */}
       <div style={{ overflow:'hidden', position:'relative' }}>
-        {/* Fade right edge */}
-        <div style={{ position:'absolute', right:0, top:0, bottom:0, width:'40px', zIndex:2, pointerEvents:'none',
+        {/* Right fade */}
+        <div style={{ position:'absolute', right:0, top:0, bottom:0, width:'32px', zIndex:2, pointerEvents:'none',
           background:`linear-gradient(to left,${COLORS.navyDeep},transparent)` }}/>
 
         <motion.div ref={trackRef}
           style={{ display:'flex', gap:`${GAP}px`, willChange:'transform', alignItems:'stretch' }}>
           {filtered.map(s => (
-            <div key={s.id} style={{ width:`${CARD_W}px`, flexShrink:0, minWidth:`min(${CARD_W}px, 90vw)` }}>
+            <div key={s.id} style={{
+              // full width on mobile, capped on desktop — computed via CSS clamp
+              width: 'clamp(280px, 82vw, 480px)',
+              flexShrink: 0,
+            }}>
               <SeriesCard series={s}/>
             </div>
           ))}
@@ -257,7 +270,6 @@ function SeriesSlider({ series, filter }) {
 
       {/* Controls */}
       <div style={{ display:'flex', alignItems:'center', gap:'0.75rem', marginTop:'1.25rem' }}>
-        {/* Prev */}
         <button onClick={() => slideTo(idx-1)} disabled={idx===0}
           style={{
             width:'36px', height:'36px', background:'none', border:`1px solid ${COLORS.border}`,
@@ -282,7 +294,6 @@ function SeriesSlider({ series, filter }) {
           ))}
         </div>
 
-        {/* Next */}
         <button onClick={() => slideTo(idx+1)} disabled={idx===maxIdx}
           style={{
             width:'36px', height:'36px', background:'none', border:`1px solid ${COLORS.border}`,
@@ -295,7 +306,7 @@ function SeriesSlider({ series, filter }) {
         </button>
       </div>
 
-      {/* Position label */}
+      {/* Position */}
       <p style={{ fontFamily:FONTS.accent, fontSize:'0.6rem', letterSpacing:'0.18em', textTransform:'uppercase', color:COLORS.subtle, textAlign:'center', marginTop:'0.6rem' }}>
         {idx+1} / {filtered.length}
         {filtered.length < RESULTS.length ? ` · showing last ${SETTINGS.showNo} series` : ''}
@@ -321,25 +332,25 @@ function OverallStats() {
       style={{ background:`linear-gradient(135deg,${COLORS.cardBg},${COLORS.navyMid})`,
         border:`1px solid ${COLORS.border}`, padding:'clamp(1.5rem,4vw,2.5rem)', marginBottom:'3rem' }}>
 
-      {/* Donuts */}
-      <div style={{ display:'flex', flexWrap:'wrap', gap:'2.5rem', justifyContent:'center', alignItems:'center',
+      {/* Donuts — stack on mobile, row on desktop */}
+      <div style={{ display:'flex', flexWrap:'wrap', gap:'2rem', justifyContent:'center', alignItems:'center',
         paddingBottom:'2rem', borderBottom:`1px solid ${COLORS.border}`, marginBottom:'2rem' }}>
-        <Donut pct={s.seriesWinPct} size={110} stroke={9}
+        <Donut pct={s.seriesWinPct} size={100} stroke={8}
           color={s.seriesWinPct>=50?COLORS.gold:'#EF4444'}
           label="Series Win%" sub={`${s.seriesWon} of ${RESULTS.length} series`}/>
-        <Donut pct={s.matchWinPct} size={110} stroke={9}
+        <Donut pct={s.matchWinPct} size={100} stroke={8}
           color={s.matchWinPct>=50?COLORS.gold:'#EF4444'}
           label="Match Win%" sub={`${s.totalWins} of ${s.totalMatches} matches`}/>
       </div>
 
-      {/* Stat pills */}
-      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(100px,1fr))', gap:'1px', background:COLORS.border }}>
+      {/* Stat pills — 2 cols on mobile, 6 on desktop */}
+      <div style={{ display:'grid', gridTemplateColumns:'repeat(auto-fit,minmax(90px,1fr))', gap:'1px', background:COLORS.border }}>
         {pills.map(({ label, value, col }) => (
-          <div key={label} style={{ background:COLORS.cardBg, padding:'1.25rem 0.5rem', textAlign:'center' }}>
-            <div style={{ fontFamily:FONTS.display, fontSize:'clamp(1.5rem,4vw,2.2rem)', fontWeight:700, color:col, lineHeight:1, marginBottom:'0.3rem' }}>
+          <div key={label} style={{ background:COLORS.cardBg, padding:'1rem 0.4rem', textAlign:'center' }}>
+            <div style={{ fontFamily:FONTS.display, fontSize:'clamp(1.3rem,5vw,2rem)', fontWeight:700, color:col, lineHeight:1, marginBottom:'0.3rem' }}>
               {value}
             </div>
-            <div style={{ fontFamily:FONTS.accent, fontSize:'0.55rem', letterSpacing:'0.15em', textTransform:'uppercase', color:COLORS.muted }}>
+            <div style={{ fontFamily:FONTS.accent, fontSize:'0.52rem', letterSpacing:'0.12em', textTransform:'uppercase', color:COLORS.muted, lineHeight:1.3 }}>
               {label}
             </div>
           </div>
