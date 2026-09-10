@@ -49,7 +49,8 @@ export const ASSETS = {
     { id: 7, name: 'Zamboy', role: 'Batsman', number: '22', speciality: 'Versatile', image: 'assets/players/zamboy.jpeg' },
     { id: 8, name: 'Halik', role: 'Bowler', number: '32', speciality: 'Versatile', image: 'assets/players/halik.jpeg' },
     { id: 9, name: 'Naazir', role: 'Bowler', number: '17', speciality: 'Versatile', image: 'assets/players/naazir.jpeg' },
-    { id: 10, name: 'Madushan', role: 'Allrounder', number: '5', speciality: 'Versatile', image: 'assets/players/madushan.jpeg' }
+    { id: 10, name: 'Madushan', role: 'Allrounder', number: '5', speciality: 'Versatile', image: 'assets/players/madushan.jpeg' },
+    { id: 11, name: 'Sisuwa', role: 'Batsman', number: '76', speciality: 'Versatile', image: 'assets/players/sisuwa.jpeg' }
   ],
   
 };
@@ -62,12 +63,13 @@ export const SOCIAL = {
 };
 
 export const NAV_ITEMS = [
-  { label: 'Home',    href: '#hero'    },
-  { label: 'About',   href: '#about'   },
-  { label: 'Mission', href: '#mission' },
-  { label: 'Squad',   href: '#squad'   },
-  { label: 'Results', href: '#results' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home',        href: '#hero'        },
+  { label: 'About',       href: '#about'       },
+  { label: 'Mission',     href: '#mission'     },
+  { label: 'Squad',       href: '#squad'       },
+  { label: 'Results',     href: '#results'     },
+  { label: 'Tournaments', href: '#tournaments' },
+  { label: 'Contact',     href: '#contact'     },
 ];
 
 export const TEAM = {

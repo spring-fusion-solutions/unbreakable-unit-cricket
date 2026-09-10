@@ -27,10 +27,10 @@ function Counter({ target, suffix = '', duration = 2000 }) {
 }
 
 const stats = [
-  { value: 11,  suffix: '',   label: 'Elite Players'    },
+  { value: 20,  suffix: '',   label: 'Elite Players'    },
   { value: 100, suffix: '%',  label: 'Team Spirit'      },
-  { value: 2024,suffix: '',   label: 'Founded'          },
-  { value: 1,   suffix: '🏆', label: 'Goal — Victory'  },
+  { value: 2025,suffix: '',   label: 'Founded'          },
+  { value: 4,   suffix: '🏆', label: 'Goal - Victory'  },
 ];
 
 const values = [
